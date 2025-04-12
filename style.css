@@ -1,0 +1,387 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+table {
+    color: white;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+
+td,th {
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.f1_pilotos
+.etapas,
+.equipes,
+.equipes_pilotos,
+.pontuacao {
+    height: 100vh;
+}
+
+.cabecalho {
+    background-color: var(--preto);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cabecalho_titulo {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+            
+.fialogo,.logo_f1 {
+    width: 80px;
+}
+
+.div_titulo {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    text-align: center;
+    background: url("Img/logos/fundo_titulo.jpg");
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 0% 0%;
+    animation: moverFundo 10s linear infinite;
+    border: 1px solid red;
+}
+
+@keyframes moverFundo {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 10% 10%;
+    }
+}
+
+.f1_pilotos {
+    position: relative;
+    background-image: url("Img/logos/f1foto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 150vh;
+}
+
+.f1_pilotos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.f1_pilotos > * {
+    position: relative;
+    z-index: 2;
+}
+
+.tabela_pilotos {
+    position: relative;
+    top: 20px;
+}
+
+.tabela_pilotos_th {
+    font-family: "Bungee Tint", sans-serif;
+    border-bottom: 1px solid red;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.tabela_pilotos_td {
+    font-size: 16px;
+    padding: 8px;
+    border-bottom: 1px solid #333;
+}
+  
+.tabela_pilotos tr:hover td {
+    background-color: #333;
+    transition: 0.3s;
+}
+ 
+.tabela_pilotos img {
+    width: 45px;
+    height: auto;
+}
+ 
+.etapas {
+    position: relative;
+    background-image: url("Img/logos/gpfoto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.etapas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.etapas > * {
+    position: relative;
+    z-index: 2;
+}
+
+.tabela_gp_australia,.tabela_gp_china {
+    margin: 50px 100px;
+}
+
+.tabela_lado {
+    display: flex;
+    justify-content: center;
+}
+
+.tabela_etapas_th {
+    font-family: "Bungee Tint", sans-serif;
+    border-bottom: 1px solid red;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.tabela_etapas_td {
+    font-size: 16px;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+  
+.etapas tr:hover td {
+    background-color: #333;
+    transition: 0.3s;
+}
+
+.primeiro_lugar {
+    color: #DE9800;
+}
+
+.segundo_lugar {
+    color:  #a3c2c2;
+}
+
+.terceiro_lugar {
+    color: #994d00;
+}
+
+.lugares {
+    color: #ff8c66;
+}
+
+.ultima_td {
+    border-bottom: 1px solid red;
+    padding: 12px;
+}
+ 
+.equipes {
+    position: relative;
+    background-image: url("Img/logos/equipes_fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 130vh;
+}
+
+.equipes::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.equipes > * {
+    position: relative;
+    z-index: 2;
+}
+
+.tabela_equipes {
+    position: relative;
+    top: 20px;
+}
+
+.tabela_equipes_th {
+    font-family: "Bungee Tint", sans-serif;
+    border-bottom: 1px solid red;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.tabela_equipes_td {
+    font-size: 16px;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+  
+.equipes tr:hover td {
+    background-color: #333;
+    transition: 0.3s;
+}
+
+.equipes img {
+    width: 52px;
+}
+
+.equipes_pilotos {
+    position: relative;
+    background-image: url("Img/logos/pilotos_equipes_fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 170vh;
+}
+
+.equipes_pilotos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.equipes_pilotos > * {
+    position: relative;
+    z-index: 2;
+}
+
+.tabela_equipes_pilotos {
+    margin-top: 60px;
+}
+
+.tabela_equipes_pilotos_th {
+    font-family: "Bungee Tint", sans-serif;
+    border-bottom: 1px solid red;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.tabela_equipes_pilotos_td {
+    font-size: 17px;
+    height: 100px;
+    width: 130px;
+    border-bottom: 1px solid #302f2f;
+}
+  
+.equipes_pilotos tr:hover td {
+    background-color: #333;
+    transition: 0.3s;
+}
+
+.equipes_pilotos img {
+    width: 80px;
+}
+
+.pontuacao {
+    position: relative;
+    background-image: url("Img/logos/fundo_pontuacao.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.pontuacao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.pontuacao > * {
+    position: relative;
+    z-index: 2;
+}
+
+.tabela_pontuacao_piloto {
+    position: relative;
+    top: 30px;
+    left: -200px;
+}
+
+.tabela_pontuacao_th {
+    font-family: "Bungee Tint", sans-serif;
+    border-bottom: 1px solid red;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.tabela_pontuacao_td {
+    font-size: 17px;
+    height: 40px;
+    width: 120px;
+    border-bottom: 1px solid #302f2f;
+}
+  
+.tabela_pontuacao_piloto tr:hover td {
+    background-color: #333;
+    transition: 0.3s;
+}
+
+.tabela_pontuacao_equipes {
+    position: relative;
+    top: -440px;
+    left: 220px;
+}
+
+.tabela_pontuacao_equipes_th {
+    font-family: "Bungee Tint", sans-serif;
+    border-bottom: 1px solid red;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    height: 1px;
+}
+
+.tabela_pontuacao_equipes_td {
+    width: 470px;
+    height: 150px;
+}
